@@ -336,11 +336,20 @@ body {
 }
 
 .whylease {
-  padding: 150px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 @media (max-width: 1240px) {
   .whylease {
-    padding: calc(
+    padding-top: calc(
+      50px + 100 *
+        ((100vw - 320px) / 920)
+    );
+  }
+}
+@media (max-width: 1240px) {
+  .whylease {
+    padding-bottom: calc(
       50px + 100 *
         ((100vw - 320px) / 920)
     );
