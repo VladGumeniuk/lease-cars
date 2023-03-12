@@ -1,0 +1,73 @@
+.footer {
+  background-color: $colorDark;
+  padding: 50px 0 32px;
+  color: $colorWhite;
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+  }
+
+  &__menu-list {
+    max-width: 250px;
+    li {
+      padding: 0 10px;
+      &:not(:first-child) {
+        @include adaptiv-value("margin-top", 20, 7);
+      }
+    }
+  }
+
+  &__menu-title {
+    @include adaptiv-value("margin-bottom", 40, 15);
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__menu-link {
+    color: $colorWhite;
+  }
+
+  &__copy {
+    max-width: 806px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__copy-text {
+    font-size: 12px;
+  }
+
+  &__copy-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiv-value("gap", 40, 15);
+  }
+
+  &__copy-link {
+    color: $colorWhite;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $colorWhiteLight;
+    }
+  }
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

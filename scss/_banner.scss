@@ -1,0 +1,74 @@
+.banner {
+  @include adaptiv-value("padding-top", 250, 125);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  &__title {
+    margin-bottom: 38px;
+    @include adaptiv-value("font-size", 96, 34);
+    color: $colorWhite;
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    max-width: 430px;
+    width: 100%;
+    padding: 23px;
+    background: #151515;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 36, 18);
+    text-align: center;
+    color: $colorWhite;
+    transition: all 0.5s ease;
+    &:hover {
+      background: $colorBlue;
+    }
+  }
+}
+.swiper::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(21, 21, 21, 0.3);
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 3px;
+  background: $colorDark;
+  opacity: 1;
+  border-radius: 0;
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+}
+.swiper-pagination-bullet-active {
+  height: 6px;
+  background: $colorWhite;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 15px;
+  @media (max-width: 768px) {
+    margin: 0 5px;
+  }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-fraction {
+  bottom: 50px;
+}

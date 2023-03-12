@@ -1,0 +1,33 @@
+.consider {
+  @include adaptiv-value("padding-bottom", 150, 50);
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 580px;
+    margin: 0 auto;
+    color: $colorDark;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 40px;
+  }
+
+  &__list-image {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__list-text {
+    color: $colorDark;
+  }
+}

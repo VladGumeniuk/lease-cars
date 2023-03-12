@@ -1,0 +1,34 @@
+.whylease {
+  @include adaptiv-value("padding", 150, 50);
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 40px;
+  }
+
+  &__list-item {
+    text-align: center;
+  }
+
+  &__list-icon {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  &__list-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    color: $colorDark;
+  }
+
+  &__list-text {
+    text-align: left;
+    color: $colorDark;
+  }
+}

@@ -1,0 +1,65 @@
+.howdoes {
+  @include adaptiv-value("padding-bottom", 150, 50);
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    max-width: 580px;
+    margin: 0 auto;
+    color: $colorDark;
+  }
+
+  &__subtitle {
+    max-width: 580px;
+    margin: 50px auto 0;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 24, 18);
+    color: $colorDark;
+  }
+
+  &__list {
+    max-width: 580px;
+    margin: 50px auto;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list-text {
+    max-width: 270px;
+    color: $colorDark;
+  }
+}
+.round {
+  @include adaptiv-value("margin-right", 150, 20);
+  font-weight: 700;
+  @include adaptiv-value("font-size", 48, 24);
+
+  color: $colorWhite;
+}
+.round::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include adaptiv-value("width", 100, 40);
+  @include adaptiv-value("height", 100, 40);
+  border-radius: 50%;
+  background: $colorBlue;
+}
+.round1::before {
+  content: "1";
+}
+.round2::before {
+  content: "2";
+}
+.round3::before {
+  content: "3";
+}

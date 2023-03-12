@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$containerWidth: 1240;
+$containerPadding: 20;
+
+// Color ==================================================
+
+$colorWhite: #fff;
+$colorBlue: #0066ff;
+$colorDark: #151515;
+$colorWhiteLight: #e8e8e8;
+
+// AdaptivValue ===========================================
+
+$maxContainerWidth: $containerWidth;
+
+@mixin adaptiv-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: $startSize + px;
+  @media (max-width: #{$maxContainerWidth + px}) {
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} *
+        ((100vw - 320px) / #{$maxContainerWidth - 320})
+    );
+  }
+}
+
+// REM =======================================================
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+// =========================================================
